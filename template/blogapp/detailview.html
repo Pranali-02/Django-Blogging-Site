@@ -1,0 +1,44 @@
+{% extends 'blogapp/base.html' %}
+{% block parentblock %}
+<br>
+<br>
+<br>
+
+<style>
+
+  table {
+
+      width:950px;
+      height:140px;
+  }
+  </style>
+
+  {% if msg %}
+  {{msg}}
+  {% endif %}
+
+{% if detail %}
+<center>
+<table style="background-color:lightgrey">
+<tr><td></td></tr>
+ <tr><td rowspan="5"><a href='/detailview/{{detail.id}}'><img src="{{detail.Image.url}}" height='130' width='150'/></a></td><tr>
+
+ <td><center>{{detail.Title}}</center></td>
+ <tr><td style="text-align:right">By:{{detail.Author}}</td></tr>
+   <tr><td style="text-align:center">  {{detail.Description}}</td></tr>
+<tr><td style="text-align:center"><img src="https://image.freepik.com/free-icon/calendar-icon-black_318-9776.jpg" height='15' width='15'/>     {{detail.upload_date| timesince}}</td></tr>
+
+
+<br>
+
+
+</table>
+ 
+
+
+
+
+
+</center>
+{% endif %}
+{% endblock %}

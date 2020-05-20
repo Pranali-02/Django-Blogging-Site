@@ -1,0 +1,28 @@
+{% extends 'blogapp/base.html' %}
+{% block parentblock %}
+
+{% load crispy_forms_tags %}
+{% load static %}
+<link rel='stylesheet' href='{% static "css/style.css" %}' />
+<center>
+<h1>SignUp</h1>
+
+
+{% if msg %}
+{{msg}}
+{% endif %}
+
+<div class="row justify-content-center">
+  <div class="col-lg-6">
+<form style="border:5px solid black" method="post">
+{{form | crispy}}
+{% csrf_token %}
+<input type='submit' value='Signup' class='btn btn-danger' />
+<br>
+<br>
+</form>
+</div>
+</div>
+
+</center>
+{% endblock %}

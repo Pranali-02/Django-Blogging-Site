@@ -1,0 +1,35 @@
+{% extends 'blogapp/base.html' %}
+{% block parentblock %}
+
+{% load crispy_forms_tags %}
+
+<style>
+  form{
+  margin-left: 450px;
+  width: 360px;
+  }
+  </style>
+
+<h1><center>Post Your Blog </h1></center>
+<hr>
+<center>
+  {% if msg %}
+  <div class="alert alert-success">
+      <strong>{{msg}}</strong>
+    </div>
+  {% endif %}
+
+
+  <div class="row">
+    <div class="col-lg-6">
+<form method="post" enctype="multipart/form-data">
+{{form | crispy }}
+{% csrf_token %}
+<br>
+<input type="submit" value="Register" class="btn btn-danger" />
+
+</form>
+</div>
+</div>
+</center>
+{% endblock %}

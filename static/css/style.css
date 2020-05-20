@@ -1,0 +1,17 @@
+h1{
+color:Black;
+}
+
+
+body{
+background-image: url('https://i.pinimg.com/originals/1a/2f/ce/1a2fce9d9ad2c08b01995324bff7a9b3.jpg');
+height: 350px;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+position: relative;
+}
+form{
+margin-left: 450px;
+width: 360px;
+}
